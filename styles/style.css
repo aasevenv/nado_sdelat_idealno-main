@@ -1,5 +1,5 @@
 .page {
-    position: relative;
+    /* position: relative; */
     min-width: 800px;
     display: flex;
     justify-content: center; /* надо как то без этого */
@@ -9,7 +9,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    z-index: 1;
+    z-index: -1;
     background-color: rgba(255, 255, 255, 0.30);
 }
 
@@ -20,10 +20,12 @@
     object-position: center;
     position: absolute;
     inset: 0;
+    z-index: 0;
 }
 
 .page__title {
-    z-index: 1;
+    z-index: 0;
+    padding-top: 80px;
     margin: 0 auto ;
     max-width: 730px;
     color: black;
@@ -36,7 +38,6 @@
 
 .page__title::after {
     content: '*';
-    position: relative;
 }
 
 .page__title:hover {
@@ -48,7 +49,7 @@
     content: 'На самом деле нет.\AВажнее &mdash; научиться ошибаться.';
     position: absolute;
     top: 180px;
-    right: 20px;
+    right: 60px;
     max-width: 760px;
     border: 2px solid #000;
     border-radius: 20px;
